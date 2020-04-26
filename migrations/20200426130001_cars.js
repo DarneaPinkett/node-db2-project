@@ -1,16 +1,16 @@
 
 exports.up = function(knex) {
-  return knex.schema.creatTable('cars', tbl => {
+  return knex.schema.createTable('cars', tbl => {
    tbl.increments();
    tbl.integer("VIN")
    .unique()
-   .notNulable();
+   .notNullable();
    tbl.string("make")
-   .notNulable();
+   .notNullable();
    tbl.string("model")
-   .notNulable();
+   .notNullable();
    tbl.integer("meilage")
-   .notNulable();   
+   .notNullable();   
   })
 };
 
